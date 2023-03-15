@@ -79,7 +79,7 @@ void dodaj(float a, float b)
 
 void uruchom()
 {
-    while (true)
+    while (1)
     {
         pokaz_menu();
 
