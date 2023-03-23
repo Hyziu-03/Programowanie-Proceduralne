@@ -12,6 +12,12 @@ void multiplication_table();
 // Count number of sigits in an integer
 void count_digits();
 
+// Reverse a number
+void reverse_number();
+
+// Display factors of a number
+void factors();
+
 int main()
 {
 	return 0;
@@ -86,4 +92,37 @@ void count_digits()
 	for (count = 0; buffer[count] != '\0'; ++count);
 
 	printf("Ta liczba ma %d cyfr(y)", count);
+}
+
+void reverse_number()
+{
+	int number;
+	char buffer[12];
+
+	printf("Podaj liczbe: ");
+	scanf_s("%d", &number);
+	sprintf_s(buffer, "%d", number);
+
+	size_t size = strlen(buffer);
+
+	printf("Odwrocona liczba: ");
+	for (int i = size - 1; i >= 0; i--)
+	{
+		printf("%c", buffer[i]);
+	}
+}
+
+void factors()
+{
+	int number;
+	printf("Podaj liczbe: ");
+	scanf_s("%d", &number);
+
+	for (int i = 1; i < number; i++)
+	{
+		if (number % i == 0)
+		{
+			printf("%d jest dzielnikiem %d\n", i, number);
+		}
+	}
 }
