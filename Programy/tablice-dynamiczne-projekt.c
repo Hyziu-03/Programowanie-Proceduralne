@@ -1,7 +1,7 @@
 ﻿#include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "funkcje.cpp";
+#include "funkcje.c";
 
 int main()
 {
