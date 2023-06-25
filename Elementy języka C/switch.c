@@ -21,7 +21,6 @@ int main()
 
         default:
             printf("nie ma takiej opcji :)");
-        break;
     }
 
     return 0;

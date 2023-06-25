@@ -2,11 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 
-// struktura o nazwie osoba
-// zawiera tablice znakowa imie, tablice znakowa nazwisko, liczba calkowita wiek
-// rozmiar tablic po 40
-// dodac do pliku
-
 struct Osoba {
     char imie[40];
     char nazwisko[40];

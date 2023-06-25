@@ -26,37 +26,37 @@ void obliczenia(int(*wsk)(int, int), int a, int b)
 
     switch(wybor)
     {
-    case 1:
-        wsk = dodawanie;
+        case 1:
+            wsk = dodawanie;
         break;
 
-    case 2:
-        wsk = odejmowanie;
+        case 2:
+            wsk = odejmowanie;
         break;
 
-    case 3:
-        wsk = mnozenie;
+        case 3:
+            wsk = mnozenie;
         break;
 
-    case 4:
-        printf("To koniec");
-        exit(0);
+        case 4:
+            printf("To koniec");
+            exit(0);
         break;
 
-    default:
-        printf("Nie ma takiej opcji");
+        default:
+            printf("Nie ma takiej opcji");
     }
-
     printf("Wynik operacji to %d \n", wsk(a, b));
 }
 
 int main()
 {
     int(*wsk)(int, int);
-
     int liczba1, liczba2;
+
     printf("Podaj pierwsza liczbe: ");
     scanf("%d", &liczba1);
+
     printf("Podaj druga liczbe: ");
     scanf("%d", &liczba2);
 

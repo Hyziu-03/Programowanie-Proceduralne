@@ -24,10 +24,7 @@ int main()
 
     fprintf(plik, "IMIE\tNAZWISKO\tWIEK\n");
     for(int i = 0; i < rozmiar; i++)
-    {
         fprintf(plik, "%s\t%s\t%d\n", tablica[i].imie, tablica[i].nazwisko, tablica[i].wiek);
-    }
-
     fclose(plik);
     free(tablica);
     return 0;

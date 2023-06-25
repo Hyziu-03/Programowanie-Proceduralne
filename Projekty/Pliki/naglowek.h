@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct Osoba {
+struct Osoba
+{
     char imie[40];
     char nazwisko[40];
     int wiek;

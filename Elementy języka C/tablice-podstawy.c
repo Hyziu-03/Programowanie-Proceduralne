@@ -17,14 +17,10 @@ int main()
         tablica[i] = rand() % 20 + 1;
         printf("%d ", tablica[i]);
     }
-
     printf("\n");
 
     for (int i = rozmiar - 1; i >= 0; i--)
-    {
         printf("%d ", tablica[i]);
-    }
-
     printf("\n");
 
     return 0;

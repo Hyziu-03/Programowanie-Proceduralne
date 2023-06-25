@@ -60,9 +60,7 @@ void pokaz_adres(struct Adres* adres)
     {
         koniec_pliku = fscanf(plik, "%s%s%d", adres->miasto, adres->ulica, adres->kod_pocztowy, adres->numer_mieszkania);
         if(koniec_pliku > 0)
-        {
             printf("%s\t%s\t%d\n", adres->miasto, adres->ulica, adres->kod_pocztowy, adres->numer_mieszkania);
-        }
     } while (koniec_pliku > 0);
 
     fclose(plik);

@@ -1,5 +1,3 @@
-// runtime error upon entering a number
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,35 +20,33 @@ int odejmowanie(int a, int b)
 
 int zwieksz_o(int a)
 {
-                    int ile;
-                printf("O ile zwiekszyc? ");
-                scanf("%d", &ile);
-
+    int ile;
+    printf("O ile zwiekszyc? ");
+    scanf("%d", &ile);
     return a + ile;
 }
 
 int zmniejsz_o(int a)
 {
-                    int ile;
-                printf("O ile zmniejszyc? ");
-                scanf("%d", &ile);
+    int ile;
+    printf("O ile zmniejszyc? ");
+    scanf("%d", &ile);
     return a - ile;
 }
 
 int zwieksz_razy(int a)
 {
-                    int ile;
-                printf("Ile razy zwiekszyc? ");
-                scanf("%d", &ile);
+    int ile;
+    printf("Ile razy zwiekszyc? ");
+    scanf("%d", &ile);
     return a * ile;
 }
 
 int zmniejsz_razy(int a)
 {
-                    int ile;
-                printf("Ile razy zmniejszyc? ");
-                scanf("%d", &ile);
-
+    int ile;
+    printf("Ile razy zmniejszyc? ");
+    scanf("%d", &ile);
     return a / ile;
 }
 
@@ -67,25 +63,25 @@ int operacje(int(*wsk)(int, int), int a, int b)
 
     switch(wybor)
     {
-    case 1:
-        wsk = dodawanie;
+        case 1:
+            wsk = dodawanie;
         break;
 
-    case 2:
-        wsk = odejmowanie;
+        case 2:
+            wsk = odejmowanie;
         break;
 
-    case 3:
-        wsk = mnozenie;
+        case 3:
+            wsk = mnozenie;
         break;
 
-    case 4:
-        printf("To koniec");
-        exit(0);
+        case 4:
+            printf("To koniec");
+            exit(0);
         break;
 
-    default:
-        printf("Nie ma takiej opcji");
+        default:
+            printf("Nie ma takiej opcji");
     }
 
     printf("Wynik operacji to %d \n", wsk(a, b));
@@ -118,40 +114,32 @@ int main()
 
         switch(wybor)
         {
-        case 1:
-            {
+            case 1:
                 abc = zwieksz_o;
-            }
             break;
 
-        case 2:
-            {
+            case 2:
                 abc = zmniejsz_o;
-            }
             break;
 
-        case 3:
-            {
+            case 3:
                 abc = zwieksz_razy;
-            }
             break;
 
-        case 4:
-            {
+            case 4:
                 abc = zmniejsz_razy;
-            }
             break;
 
-        case 5:
-            abc = kwadrat;
+            case 5:
+                abc = kwadrat;
             break;
 
-        case 6:
-            printf("To koniec");
-            exit(0);
+            case 6:
+                printf("To koniec");
+                exit(0);
             break;
 
-        case 7:
+            case 7:
                 while(true)
                 {
                     int liczba1, liczba2;
@@ -170,8 +158,8 @@ int main()
                 }
             break;
 
-        default:
-            printf("Nie ma takiej opcji");
+            default:
+                printf("Nie ma takiej opcji");
         }
 
         printf("Wynik operacji to %d \n", abc(liczba));

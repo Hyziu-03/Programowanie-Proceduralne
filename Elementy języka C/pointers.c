@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-void zamien(int *pierwsza, int *druga)
+void zamien(int *first, int *second)
 {
-    int chwilowa = 0;
-    chwilowa = *pierwsza;
-    *pierwsza = *druga;
-    *druga = chwilowa;
+    int temporary = 0;
+    temporary = *first;
+    *first = *second;
+    *second = temporary;
 }
 
 int main()
@@ -13,11 +13,7 @@ int main()
     int variable = 76;
     printf("variable =  %d \n", variable);
 
-    // wskaznik
     int *pointer = &variable;
-
-    // odniesienie do wartosci znajdujacej...
-    // ...sie pod adresem przechowywanym przez wskaznik
     *pointer = 987;
     printf("variable =  %d \n", variable);
 

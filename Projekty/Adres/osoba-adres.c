@@ -19,21 +19,15 @@ int main()
         switch(wybor)
         {
             case 1:
-            {
                 struct Odczytana odczytana;
                 struct Adres adres;
                 pokaz_osobe(&odczytana);
-            }
             break;
 
             case 2:
-            {
                 struct Osoba *tablica = malloc(ROZMIAR * sizeof(struct Osoba));
                 for(int i = 0; i < ROZMIAR; i++)
-                {
                     dodaj_osobe(&tablica[i]);
-                }
-            }
             break;
 
             case 3:

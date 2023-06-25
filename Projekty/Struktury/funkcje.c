@@ -43,13 +43,10 @@ void pokaz_tablice(struct TablicaDynamiczna* tab)
 {
     printf("Tablica wyglada w ten sposob: \n");
 
+    // Zaokraglanie liczby rzeczywistej do dwoch miejsc po przecinku dla zaoszczedzenia...
+    // ...miejsca na ekranie
     for(int i = 0; i < tab->rozmiar; i++)
-    {
-        // Zaokraglanie liczby rzeczywistej do dwoch miejsc po przecinku dla zaoszczedzenia...
-        // ...miejsca na ekranie
         printf("%.2f ", *(tab->tablica + i));
-    }
-
     printf("\n");
 }
 
@@ -57,18 +54,13 @@ void sortuj_babelkowo(struct TablicaDynamiczna* tab)
 {
     int rozmiar = tab->rozmiar;
     for(int i = 0; i < rozmiar; i++)
-    {
         for(int j = 0; j < rozmiar - i - 1; j++)
-        {
                 if(tab->tablica[j] > tab->tablica[j + 1])
                 {
                     float temp = tab->tablica[j];
                     tab->tablica[j] = tab->tablica[j + 1];
                     tab->tablica[j + 1] = temp;
                 }
-        }
-    }
-
     printf("Posortowalem tablice babelkowo \n");
 }
 
@@ -76,34 +68,28 @@ float oblicz_sume_tablicy(struct TablicaDynamiczna* tab)
 {
     float suma = 0;
     for(int i = 0; i < tab->rozmiar; i++)
-    {
         suma += tab->tablica[i];
-    }
     return suma;
 }
 
 float znajdz_najmniejszy_element(struct TablicaDynamiczna* tab)
 {
     float najmniejszy_element = tab->tablica[0];
+
     for(int i = 0; i < tab->rozmiar; i++)
-    {
         if(tab->tablica[i] < najmniejszy_element)
-        {
             najmniejszy_element = tab->tablica[i];
-        }
-    }
+
     return najmniejszy_element;
 }
 
 float znajdz_najwiekszy_element(struct TablicaDynamiczna* tab)
 {
     float najwiekszy_element = tab->tablica[0];
+
     for(int i = 0; i < tab->rozmiar; i++)
-    {
         if(tab->tablica[i] > najwiekszy_element)
-        {
             najwiekszy_element = tab->tablica[i];
-        }
-    }
+
     return najwiekszy_element;
 }

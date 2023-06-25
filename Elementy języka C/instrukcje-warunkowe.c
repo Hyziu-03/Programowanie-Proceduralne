@@ -5,7 +5,7 @@ int main()
     int liczba = 0;
 
     printf("Podaj liczbe calkowita > 10: ");
-    scanf_s("%d", &liczba);
+    scanf("%d", &liczba);
 
     if (liczba > 10)
     {
